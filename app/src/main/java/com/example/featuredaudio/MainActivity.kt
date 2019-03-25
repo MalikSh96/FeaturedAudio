@@ -1,39 +1,51 @@
 package com.example.featuredaudio
 
-import android.os.Bundle
-import android.support.design.widget.Snackbar
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
-
-import kotlinx.android.synthetic.main.activity_main.*
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView
+import android.widget.Toast;
 
 class MainActivity : AppCompatActivity() {
 
+    /*var player : MediaPlayer? null
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+    }
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+    fun play(v: View) {
+        if (player == null) {
+            player = MediaPlayer.create(this, R.raw.electronicsound)
+            player.setOnCompletionListener { MediaPlayer.OnCompletionListener { stopPlayer() } }
+        }
+
+        player.start()
+    }
+
+    fun pause(v: View) {
+        if (player != null) {
+            player.pause()
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+    fun stop(v: View) {
+        stopPlayer()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+    private fun stopPlayer() {
+        if (player != null) {
+            player.release()
+            player = null
+            Toast.makeText(this, "MediaPlayer released", Toast.LENGTH_SHORT).show()
         }
     }
+
+    override fun onStop() {
+        super.onStop()
+        stopPlayer()
+    }*/
 }
