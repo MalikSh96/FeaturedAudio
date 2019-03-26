@@ -1,6 +1,6 @@
 package com.example.featuredaudio;
 
-import android.media.MediaPlayer;
+/*import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,5 +52,5 @@ public class MainAct extends AppCompatActivity {
         super.onStop();
         stopPlayer();
     }
-}
+*/
 //Link: https://www.youtube.com/watch?v=C_Ka7cKwXW0

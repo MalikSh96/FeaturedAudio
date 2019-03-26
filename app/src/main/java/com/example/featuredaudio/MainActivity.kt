@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 class MainActivity : AppCompatActivity() {
 
-    /*var player : MediaPlayer? null
+    var player : MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
     fun play(v: View) {
         if (player == null) {
             player = MediaPlayer.create(this, R.raw.electronicsound)
-            player.setOnCompletionListener { MediaPlayer.OnCompletionListener { stopPlayer() } }
+            player?.setOnCompletionListener { MediaPlayer.OnCompletionListener { stopPlayer() } }
         }
 
-        player.start()
+        player?.start()
     }
 
     fun pause(v: View) {
         if (player != null) {
-            player.pause()
+            player?.pause()
         }
     }
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun stopPlayer() {
         if (player != null) {
-            player.release()
+            player?.release()
             player = null
             Toast.makeText(this, "MediaPlayer released", Toast.LENGTH_SHORT).show()
         }
@@ -47,5 +47,5 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         stopPlayer()
-    }*/
+    }
 }
