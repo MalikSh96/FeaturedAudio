@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         if (player == null) {
             player = MediaPlayer.create(this, R.raw.electronicsound)
             player?.setOnCompletionListener { MediaPlayer.OnCompletionListener { stopPlayer() } }
+            /*MediaPlayer.OnCompletionListener:
+            * definition for a callback to be invoked when playback of a media source has completed.
+            * */
         }
 
         player?.start()
